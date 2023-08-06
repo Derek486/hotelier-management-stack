@@ -174,7 +174,7 @@
 
     -   Administrador (usuario): Es el usuario autenticable de la base de datos, este posee dos roles (gerente y recepcionista), atraves del cual será posible el acceso al dashboard de la aplicación.
 
-    -   Habitación: En esta entidad se almacena la inforamción de las habitaciones generadas por el gerente, las reservas se generan en torno a estas entidades.
+    -   Habitación: En esta entidad se almacena la información de las habitaciones generadas por el gerente, las reservas se generan en torno a estas entidades.
 
     -   Contenido: Esta entidad almacena la información de un contenido que posea una habitación, estas últimas pueden poseer más de un contenido: cama, televisión, escritorio, etc.
 
@@ -939,14 +939,7 @@ Link de proyecto FrontEnd desplegado en coolify:
 
 (Backend en proceso)
 
-URL en Heroku:
-
-URL Playlist YouTube.
-Producción de un PlayList en Youtube explicando cada una de los requerimientos.
-Video 01 - Sistema - Requisitos.
-Video 02 - Modelo de datos - DD - DER.
-etc…
-
+PlayList: https://www.youtube.com/playlist?list=PLgexcj5VtSG8qXptL0nDbwRmez3aBAYwi
 
 ## REFERENCIAS
 
