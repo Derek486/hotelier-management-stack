@@ -916,6 +916,7 @@ class <Model>ApiView(APIView):
 
     Como trabajo futuro para esta aplicación se desea lo siguiente:
 
+- Manejo personalizado de cuentas de usuario y configuraciones adicionales de dashboard.
 - Manejo de comunicación en tiempo real mediante websockets para la emisión de comunicados.
 - Envío de correos a recepcionistas y clientes.
 - Integración con whatsapp para uso de telefono.
@@ -927,17 +928,17 @@ class <Model>ApiView(APIView):
 - Pasarela de pagos real y facturación.
 
 
-Github del proyecto:
+Github del proyecto (usar rama pweb2):
 
 Front End: https://github.com/JJCondoriPinto/UnsaProjectHotelier_Front.git
 
 Back End: https://github.com/JJCondoriPinto/UnsaProjectHotelier_Back.git
 
-Link de proyecto FrontEnd desplegado en coolify:
+Links de proyecto desplegado en coolify:
 
 - https://fastbooking.bjrcode.com/
 
-(Backend en proceso)
+- https://api.fastbooking.bjrcode.com/
 
 PlayList: https://www.youtube.com/playlist?list=PLgexcj5VtSG8qXptL0nDbwRmez3aBAYwi
 
