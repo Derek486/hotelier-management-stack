@@ -934,6 +934,16 @@ Front End: https://github.com/JJCondoriPinto/UnsaProjectHotelier_Front.git
 
 Back End: https://github.com/JJCondoriPinto/UnsaProjectHotelier_Back.git
 
+Credenciales de base de datos:
+
+- Usuario: fastbook
+- Contraseña: gWqzP0up6FYm3P2cUfQRWmkM
+
+Credenciales de superusuario:
+
+- Email: fastbook@fastbooking.com
+- Contraseña: 7Cu8TL4KpFS3tturZqT5bphc
+
 Links de proyecto desplegado en coolify:
 
 - https://fastbooking.bjrcode.com/
