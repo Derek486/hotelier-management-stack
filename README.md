@@ -955,7 +955,6 @@ PlayList: https://www.youtube.com/playlist?list=PLgexcj5VtSG8qXptL0nDbwRmez3aBAY
 
 -   https://www.djangoproject.com/
 -   https://angular.io/
--   https://coolify.io/
 
 #
 
