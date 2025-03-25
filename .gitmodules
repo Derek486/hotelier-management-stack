@@ -1,0 +1,8 @@
+[submodule "hotelier-management-back"]
+	path = hotelier-management-back
+	url = https://github.com/Derek486/hotelier-management-back.git
+	branch = develop
+[submodule "hotelier-management-front"]
+	path = hotelier-management-front
+	url = https://github.com/Derek486/hotelier-management-front.git
+	branch = develop

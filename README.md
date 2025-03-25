@@ -61,139 +61,142 @@
 [![Java][Java]][java-site]
 
 ##  Tipo de Sistema
-    Se trata de una aplicación web construida con el framework Django 4, que permite la gestión básica del proceso de recepción de un hotel, desde la reserva de los huespedes hasta la salida de los mismos, la aplicación cuenta con dos vistas: para gerente y para recepcionista.
+
+Se trata de una aplicación web construida con el framework Django 4, que permite la gestión básica del proceso de recepción de un hotel, desde la reserva de los huespedes hasta la salida de los mismos, la aplicación cuenta con dos vistas: para gerente y para recepcionista.
 
 ##  Requisitos del sistema
-    Requerimientos funcionales
 
-    - RQ01 : 
-        - Titulo: Inicio y cierre de sesión
-        - Descripción: El sistema debe permitir el inicio de sesión a partir de un email y una contraseña, así como el cierre de sesión.
-        - RNF: 
-            - RNF01
-            - RNF03
-            - RNF04
-            - RNF05
+Requerimientos funcionales
 
-    - RQ02 :
-        - Titulo: Division de trabajo por roles
-        - Descripción: El sistema debe permitir la division de responsabilidades por roles (gerente y recepcionista), designando permisos y tareas para cada uno
-        - RNF:
-            - RNF01
-            - RNF03
-            - RNF04
-    
-    - RQ03: 
-        - Titulo: Gestion de habitaciones
-        - Descripción: El sistema debe autorizar al gerente la gestión de habitaciones, tanto sea creación, edición, listado (también para los recepcionistas) y eliminación, tomando datos como número de habitación, piso, tipo, precio por noche, tamaño, imagen (en caso posea) y contenido de la misma. 
-        - RNF:
-            - RNF01
-            - RNF02
-            - RNF03
-            - RNF04
-    
-    - RQ04:
-        - Titulo: Gestion de recepcionistas
-        - Descripción: El sistema debe autorizar al gerente la gestión de los recepcionistas de su hotel, registro, remoción, edición y listado, sus datos serían nombres, apellidos, dni, telefono, turno, email y contraseña del usuario.
-        - RNF:
-            - RNF01
-            - RNF03
-            - RNF04
+- RQ01 : 
+    - Titulo: Inicio y cierre de sesión
+    - Descripción: El sistema debe permitir el inicio de sesión a partir de un email y una contraseña, así como el cierre de sesión.
+    - RNF: 
+        - RNF01
+        - RNF03
+        - RNF04
+        - RNF05
 
-    - RQ05:
-        - Titulo: Visualización de reportes
-        - Descripción: El sistema debe mostrar al gerente datos reales del estado actual de su empresa, tanto sea número de recepcionistas, reservas, habitaciones, checkins por habitación, huespedes por nacionalidad y ventas semanales.
-        - RNF: 
-            - RNF02
-            - RNF04
-    
-    - RQ06: 
-        - Titulo: Gestion de reservas
-        - Descripción: El sistema debe poder permitirle a los recepcionistas la generación de reservas, pidiendo datos del huesped (identificacion, nombres, apellidos, sexo, fecha de nacimiento, nacionalidad, región, telefono y RUC de empresa, en caso posea), además del número de habitación que se desea reservar y los datos de llegada.
-        - RNF:
-            - RNF01
-            - RNF02
-            - RNF03
-            - RNF04
-            - RNF05
+- RQ02 :
+    - Titulo: Division de trabajo por roles
+    - Descripción: El sistema debe permitir la division de responsabilidades por roles (gerente y recepcionista), designando permisos y tareas para cada uno
+    - RNF:
+        - RNF01
+        - RNF03
+        - RNF04
 
-    - RQ07:
-        - Titulo: Gestión de huespedes
-        - Descripción: El recepcionista debe poder manejar la información de los huespedes, poder editarla y borrarlo en caso sea necesario, además de generar los acompañantes que posea para su hospedaje.
-        - RNF:
-            - RNF01
-            - RNF02
-            - RNF03
-            - RNF04
-        
-    - RQ08:
-        - Titulo: Manejo de Checkins
-        - Descripción: El recepcionista debe poder manejar el registro de checkins al momento de la llegada de los huespedes, estos se deberían de generar a partir de una reserva indicando los paxx (cantidad de acompañantes), fecha y en qué estado se encuentra (Activo - inactivo)
-        - RNF:
-            - RNF01
-            - RNF03
-            - RNF04
-    
-    - RQ09:
-        - Titulo: Manejo de checkouts
-        - Descripción: El recepcionista debe poder manejar el registro de checkouts al momento de que los huespedes se retiren del hotel o su hospedaja haya terminado, mostrando total calculada del titular
-        - RNF:
-            - RNF01
-            - RNF03
-            - RNF04
-    
-    - RQ10: 
-        - Titulo: Manejo de recordatorios
-        - Descripción: El sistema puede permitir el manejo de etiquetas de recordatorio para los usuarios (gerente y recepcionistas) en tanto sea necesario, contemplando un título y descripción.
-        - RNF:
-            - RNF03
-            - RNF04
+- RQ03: 
+    - Titulo: Gestion de habitaciones
+    - Descripción: El sistema debe autorizar al gerente la gestión de habitaciones, tanto sea creación, edición, listado (también para los recepcionistas) y eliminación, tomando datos como número de habitación, piso, tipo, precio por noche, tamaño, imagen (en caso posea) y contenido de la misma. 
+    - RNF:
+        - RNF01
+        - RNF02
+        - RNF03
+        - RNF04
 
-    
-    Requerimientos no funcionales
+- RQ04:
+    - Titulo: Gestion de recepcionistas
+    - Descripción: El sistema debe autorizar al gerente la gestión de los recepcionistas de su hotel, registro, remoción, edición y listado, sus datos serían nombres, apellidos, dni, telefono, turno, email y contraseña del usuario.
+    - RNF:
+        - RNF01
+        - RNF03
+        - RNF04
 
-    - RNF01 : 
-        - Titulo: Seguridad de información
-        - Descripcón: El sistema debe encapsular los datos tanto de usuarios como información sensible de la base de datos solo accesibles a partir de métodos de autenticación.
-    - RNF02 : 
-        - Titulo: Velocidad y tiempo de respuesta
-        - Descripción: El sistema debe tener un tiempo de respuesta mínimo ante las solicitudes y manejo de eventos.
-    - RNF03 : 
-        - Titulo: Interfaz intuitiva
-        - Descripcion: La interfaz debe ser amigable con el usuario y accesible a todo público, sin redundancia o contenido inutilizable.
-    - RNF04 : 
-        - Titulo: Disponibilidad continua
-        - Descripcion: La plataforma debe estar disponible en todo momento para el usuario.
-    - RNF05 : 
-        - Titulo: Manejo de errores
-        - Descripcion: El sistema debe tolerar y ser capaz de manejar los errores que se vayan produciendo por parte del mal manejo de datos y falta de autenticación.
+- RQ05:
+    - Titulo: Visualización de reportes
+    - Descripción: El sistema debe mostrar al gerente datos reales del estado actual de su empresa, tanto sea número de recepcionistas, reservas, habitaciones, checkins por habitación, huespedes por nacionalidad y ventas semanales.
+    - RNF: 
+        - RNF02
+        - RNF04
+
+- RQ06: 
+    - Titulo: Gestion de reservas
+    - Descripción: El sistema debe poder permitirle a los recepcionistas la generación de reservas, pidiendo datos del huesped (identificacion, nombres, apellidos, sexo, fecha de nacimiento, nacionalidad, región, telefono y RUC de empresa, en caso posea), además del número de habitación que se desea reservar y los datos de llegada.
+    - RNF:
+        - RNF01
+        - RNF02
+        - RNF03
+        - RNF04
+        - RNF05
+
+- RQ07:
+    - Titulo: Gestión de huespedes
+    - Descripción: El recepcionista debe poder manejar la información de los huespedes, poder editarla y borrarlo en caso sea necesario, además de generar los acompañantes que posea para su hospedaje.
+    - RNF:
+        - RNF01
+        - RNF02
+        - RNF03
+        - RNF04
+    
+- RQ08:
+    - Titulo: Manejo de Checkins
+    - Descripción: El recepcionista debe poder manejar el registro de checkins al momento de la llegada de los huespedes, estos se deberían de generar a partir de una reserva indicando los paxx (cantidad de acompañantes), fecha y en qué estado se encuentra (Activo - inactivo)
+    - RNF:
+        - RNF01
+        - RNF03
+        - RNF04
+
+- RQ09:
+    - Titulo: Manejo de checkouts
+    - Descripción: El recepcionista debe poder manejar el registro de checkouts al momento de que los huespedes se retiren del hotel o su hospedaja haya terminado, mostrando total calculada del titular
+    - RNF:
+        - RNF01
+        - RNF03
+        - RNF04
+
+- RQ10: 
+    - Titulo: Manejo de recordatorios
+    - Descripción: El sistema puede permitir el manejo de etiquetas de recordatorio para los usuarios (gerente y recepcionistas) en tanto sea necesario, contemplando un título y descripción.
+    - RNF:
+        - RNF03
+        - RNF04
+
+
+Requerimientos no funcionales
+
+- RNF01 : 
+    - Titulo: Seguridad de información
+    - Descripcón: El sistema debe encapsular los datos tanto de usuarios como información sensible de la base de datos solo accesibles a partir de métodos de autenticación.
+- RNF02 : 
+    - Titulo: Velocidad y tiempo de respuesta
+    - Descripción: El sistema debe tener un tiempo de respuesta mínimo ante las solicitudes y manejo de eventos.
+- RNF03 : 
+    - Titulo: Interfaz intuitiva
+    - Descripcion: La interfaz debe ser amigable con el usuario y accesible a todo público, sin redundancia o contenido inutilizable.
+- RNF04 : 
+    - Titulo: Disponibilidad continua
+    - Descripcion: La plataforma debe estar disponible en todo momento para el usuario.
+- RNF05 : 
+    - Titulo: Manejo de errores
+    - Descripcion: El sistema debe tolerar y ser capaz de manejar los errores que se vayan produciendo por parte del mal manejo de datos y falta de autenticación.
 
 
 ##  Modelo de datos
-    El modelo de datos esta conformado por las siguientes entidades.
 
-    -   Administrador (usuario): Es el usuario autenticable de la base de datos, este posee dos roles (gerente y recepcionista), atraves del cual será posible el acceso al dashboard de la aplicación.
+El modelo de datos esta conformado por las siguientes entidades.
 
-    -   Habitación: En esta entidad se almacena la información de las habitaciones generadas por el gerente, las reservas se generan en torno a estas entidades.
+-   Administrador (usuario): Es el usuario autenticable de la base de datos, este posee dos roles (gerente y recepcionista), atraves del cual será posible el acceso al dashboard de la aplicación.
 
-    -   Contenido: Esta entidad almacena la información de un contenido que posea una habitación, estas últimas pueden poseer más de un contenido: cama, televisión, escritorio, etc.
+-   Habitación: En esta entidad se almacena la información de las habitaciones generadas por el gerente, las reservas se generan en torno a estas entidades.
 
-    -   Huesped: Esta representa al huesped que se hospedará en el hotel (titular), almacena datos básicos de la persona y puede poseer más de una reserva,
+-   Contenido: Esta entidad almacena la información de un contenido que posea una habitación, estas últimas pueden poseer más de un contenido: cama, televisión, escritorio, etc.
 
-    -   Acompañante: Un huesped puede poseer más de un acompañante, a diferencia de un huesped en esta entidad se almacenan datos más reducidos de identificación.
+-   Huesped: Esta representa al huesped que se hospedará en el hotel (titular), almacena datos básicos de la persona y puede poseer más de una reserva,
 
-    -   Reserva: Esta entidad es la base del proceso de recepción, almacena datos de la reserva que genera el recepcionista para un huesped, posee un estado dinámico a medida que continua el proceso de recepción.
+-   Acompañante: Un huesped puede poseer más de un acompañante, a diferencia de un huesped en esta entidad se almacenan datos más reducidos de identificación.
 
-    -   Checkin: Esta entidad sirve como registro para el momento en el que un huesped haya ingresado a su estadía o se encuentre dentro del hotel, cuando ocurre esto el estado de su reserva pasa a 'Registrado'.
+-   Reserva: Esta entidad es la base del proceso de recepción, almacena datos de la reserva que genera el recepcionista para un huesped, posee un estado dinámico a medida que continua el proceso de recepción.
 
-    -   Checkout: Esta entidad sirve como registro para el momento en el que el huesped se retira del hotel, está enlazado a un solo checkin, al igual que este a una reserva.
+-   Checkin: Esta entidad sirve como registro para el momento en el que un huesped haya ingresado a su estadía o se encuentre dentro del hotel, cuando ocurre esto el estado de su reserva pasa a 'Registrado'.
 
-    -   Remind: Esta entidad es independiente y contiene información sobre un recordatorio que el usuario desee generar (titulo y descripción), un usuario puede poseer más de un recordatorio.
+-   Checkout: Esta entidad sirve como registro para el momento en el que el huesped se retira del hotel, está enlazado a un solo checkin, al igual que este a una reserva.
+
+-   Remind: Esta entidad es independiente y contiene información sobre un recordatorio que el usuario desee generar (titulo y descripción), un usuario puede poseer más de un recordatorio.
 
 
 ##  Diccionario de datos
 
-    En la construcción de software y en el diccionario de datos se tomará en cuenta el campo 'id' autogenerado de cada tabla como llave primaria.
+En la construcción de software y en el diccionario de datos se tomará en cuenta el campo 'id' autogenerado de cada tabla como llave primaria.
 
 | Administrador | | | | | |
 | -- | -- | -- | -- | -- | -- |
@@ -296,24 +299,25 @@ Para el resto de tablas se consideran los campos created_at y updated_at como Da
 ![alt](./img/diagrama_ed.png)
 
 ##  Administración con Django
-    Se muestran los pasos realizados para crear el Proyecto, la aplicación, creacion de modelos, migraciones y habilitación del panel de administración en Django.
+
+Se muestran los pasos realizados para crear el Proyecto, la aplicación, creacion de modelos, migraciones y habilitación del panel de administración en Django.
     
 ### Creación de proyecto
 
-    La creación de un proyecto en django se realiza mediante el siguiente comando:
+La creación de un proyecto en django se realiza mediante el siguiente comando:
 
 
 `django-admin startproject FastBooking .`
 
-    Para la aplicación presentada, el proyecto se llama 'FastBooking' y consta de una aplicación 'Api'
+Para la aplicación presentada, el proyecto se llama 'FastBooking' y consta de una aplicación 'Api'
 
 `django-admin startapp Api`
 
-    La aplicación de django no consta de una interfaz personalizada, sino la que nos proporciona por defecto el panel de administrador.
+La aplicación de django no consta de una interfaz personalizada, sino la que nos proporciona por defecto el panel de administrador.
 
 ### Creación de modelos
 
-    Los modelos estarán contenidos dentro de models.py, sin embargo, debido a que el usuario puede poseer dos roles ('gerente' y 'recepcionista'), se está optando por generar un usuario customizado de la siguiente manera:
+Los modelos estarán contenidos dentro de models.py, sin embargo, debido a que el usuario puede poseer dos roles ('gerente' y 'recepcionista'), se está optando por generar un usuario customizado de la siguiente manera:
 
 ```
 class CustomUserManager(UserManager):
@@ -338,7 +342,7 @@ class CustomUserManager(UserManager):
         return self._create_user(email, password, **extra_fields)
 ```
 
-    La clase presentada es la base de un usuario autenticado, en ella se definen los métodos básicos de creación
+La clase presentada es la base de un usuario autenticado, en ella se definen los métodos básicos de creación
 
 ```
 class User(AbstractBaseUser, PermissionsMixin):
@@ -386,7 +390,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.nombres or self.email.split('@')[0]
 ```
 
-    La clase de usuario posee algunos campos adicionales, como rol, turno, telefono o dni, además de definir el atributo objects con el manager definido anteriormente
+La clase de usuario posee algunos campos adicionales, como rol, turno, telefono o dni, además de definir el atributo objects con el manager definido anteriormente
 
     
 #### Clase habitacion:
@@ -557,20 +561,20 @@ class Remind(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 ```
 
-    Note que cada clase contiene dos campos created_at y updated_at, estos no fueron detallados en el diccionario de datos debido a que son comunes para casi todas las tablas.
+Note que cada clase contiene dos campos created_at y updated_at, estos no fueron detallados en el diccionario de datos debido a que son comunes para casi todas las tablas.
 
-    Para migrar las tablas a la base de datos es necesario primero crear las migraciones y ejecutarlas a través de los comandos:
+Para migrar las tablas a la base de datos es necesario primero crear las migraciones y ejecutarlas a través de los comandos:
 
 `python manage.py makemigrations`
 `python manage.py migrate`
 
-    Luego de ello debemos registrar un superusuario (gerente) para que este pueda generar los recepcionistas y gestionar sus cuentas
+Luego de ello debemos registrar un superusuario (gerente) para que este pueda generar los recepcionistas y gestionar sus cuentas
 
 `python manage.py createsuperuser`
 
-    Si los modelos se colocaron de forma correcta, para la creación del superusuario debería pedir email, nombres, apellidos, telefono, dni y contraseña.
+Si los modelos se colocaron de forma correcta, para la creación del superusuario debería pedir email, nombres, apellidos, telefono, dni y contraseña.
 
-    Una vez registrado debería registrarse al menos un modelo en el panel de administrador, en nuestro caso se optó solo por el manejo de usuarios, mientras que las demás tablas serán gestionadas en el dashboard.
+Una vez registrado debería registrarse al menos un modelo en el panel de administrador, en nuestro caso se optó solo por el manejo de usuarios, mientras que las demás tablas serán gestionadas en el dashboard.
 
 ```
 from django.contrib import admin
@@ -579,56 +583,56 @@ from .models import User
 admin.site.register(User)
 ```
 
-    Una vez colocado, en el panel de administrador nos debería de aparecer algo parecido a esto:
+Una vez colocado, en el panel de administrador nos debería de aparecer algo parecido a esto:
 
 ![alt](./img/admin.png)
 
 
-
 ##  Vistas de front end
 
-    El front end fue desarrollado en Angular v16 mediante el uso de componentes, rutas, guards, servicios e interfaces Typescript.
+El front end fue desarrollado en Angular v16 mediante el uso de componentes, rutas, guards, servicios e interfaces Typescript.
 
 ![alt](./img/login.png)
     
-    El usuario final estaría destinado para el gerente y los recepcionistas del hotel, por lo tanto, se optó por la creación de dos vistas de dashboard, una para gerente:
+El usuario final estaría destinado para el gerente y los recepcionistas del hotel, por lo tanto, se optó por la creación de dos vistas de dashboard, una para gerente:
 
 ![alt](./img/dashboard_gerente.png)
 
-    Y otra para el recepcionista:
+Y otra para el recepcionista:
 
 ![alt](./img/dashboard_recep.png)
 
-    Ambas vistas cuentan con el cambio de tema a oscuro, contracción de sidebar y generación de recordatorios.
+Ambas vistas cuentan con el cambio de tema a oscuro, contracción de sidebar y generación de recordatorios.
 
 ### Funcionalidad para gerente
 
 #### Habitaciones
-    El gerente tiene la potestad de generar habitacioens y los recepcionistas que pertenecerán a su hotel:
+
+El gerente tiene la potestad de generar habitacioens y los recepcionistas que pertenecerán a su hotel:
 
 ![alt](./img/habitaciones.png)
 
-    Como se logra observar, se pueden generar, eliminar y también buscar habitaciones según un campo especificado en el header de la tabla
+Como se logra observar, se pueden generar, eliminar y también buscar habitaciones según un campo especificado en el header de la tabla
 
 ![alt](./img/habitacion_show.png)
 
-    Esta es la visualización de una habitación en específico, se pueden editar los campos y el contenido, la misma plantilla sirve para generar más habitaciones.
+Esta es la visualización de una habitación en específico, se pueden editar los campos y el contenido, la misma plantilla sirve para generar más habitaciones.
 
 #### Recepcionistas
 
-    Lo más importante para el gerente es la generación de recepcionistas para su hotel, estos se contemplan en la siguiente vista:
+Lo más importante para el gerente es la generación de recepcionistas para su hotel, estos se contemplan en la siguiente vista:
 
 ![alt](./img/recepcionistas.png)
 
-    Se pueden generar y eliminar, también buscar por campo
+Se pueden generar y eliminar, también buscar por campo
 
 ![alt](./img/recepcionista_show.png)
 
-    Esta vista sirve para la modificación de datos, también para el registro de recepcionistas.
+Esta vista sirve para la modificación de datos, también para el registro de recepcionistas.
 
 #### Reportes
 
-    En esta sección se muestran algunos datos puntuales, como por ejemplo el número de recepcionistas actuales, reservas, habitaciones, checkins por habitación, huespedes por nacionalidad y ventas semanales, para el ejemplo se realizó una reserva y el checkout correspondiente, por lo cual, una habitación posee un checkin y un huesped fue registrado.
+En esta sección se muestran algunos datos puntuales, como por ejemplo el número de recepcionistas actuales, reservas, habitaciones, checkins por habitación, huespedes por nacionalidad y ventas semanales, para el ejemplo se realizó una reserva y el checkout correspondiente, por lo cual, una habitación posee un checkin y un huesped fue registrado.
 
 ![alt](./img/reportes.png)
 
@@ -638,49 +642,49 @@ admin.site.register(User)
 
 ![alt](./img/huespedes.png)
 
-    Como en el ejemplo anterior, se encuentra un huesped registrado y cada fila de registro posee 3 funciones: eliminar, editar y generar reserva, un huesped que se encuentra ya registrado puede generar otra reserva si esque desea volver al hotel, dicha vista se mostrará más adelante.
+Como en el ejemplo anterior, se encuentra un huesped registrado y cada fila de registro posee 3 funciones: eliminar, editar y generar reserva, un huesped que se encuentra ya registrado puede generar otra reserva si esque desea volver al hotel, dicha vista se mostrará más adelante.
 
 ![alt](./img/huesped_show.png)
 
-    En esta vista se pueden editar los campos del huesped registrado, además de registrar a sus acompañantes (esto solo es posible antes de realizar su checkin).
+En esta vista se pueden editar los campos del huesped registrado, además de registrar a sus acompañantes (esto solo es posible antes de realizar su checkin).
 
 #### Habitaciones:
 
 ![alt](./img/habitaciones_recep.png)
 
-    La vista de habitaciones para recepcionista solo le permite visualizar el listado y poder modificar el estado en el que se encuentran.
+La vista de habitaciones para recepcionista solo le permite visualizar el listado y poder modificar el estado en el que se encuentran.
 
 #### Reservas:
 
 ![alt](./img/reservas.png)
 
-    La vista de reservas le permite a lrecepcionista visualizar un listado, genear, editar, cancelar, eliminar y hacer un checkin de reservas.
+La vista de reservas le permite a lrecepcionista visualizar un listado, genear, editar, cancelar, eliminar y hacer un checkin de reservas.
 
 ![alt](./img/reserva_show.png)
 
-    En esta sección se puede editar la reserva seleccionada, la fecha de llegada, cantidad de días que se quedará el huesped, sus peticiones y la habitación a reservar.
+En esta sección se puede editar la reserva seleccionada, la fecha de llegada, cantidad de días que se quedará el huesped, sus peticiones y la habitación a reservar.
 
 ![alt](./img/reserva_create.png)
 
-    Cuando se genera una reserva se deben ingresar los datos del tituloar (huesped), además de los datos mostrados en la anterior sección, cabe decir que en el listado de huéspedes también se puede llegar a esta vista, rellenando automaticamente los datos del huesped.
+Cuando se genera una reserva se deben ingresar los datos del tituloar (huesped), además de los datos mostrados en la anterior sección, cabe decir que en el listado de huéspedes también se puede llegar a esta vista, rellenando automaticamente los datos del huesped.
 
 #### Checkins:
 
 ![alt](./img/checkins.png)
 
-    La sección de checkins se muestra a manera de listado, pudiendo eliminarlos (en cuyo caso volvería al estado de reserva) o generar un checkout
+La sección de checkins se muestra a manera de listado, pudiendo eliminarlos (en cuyo caso volvería al estado de reserva) o generar un checkout
 
 #### Checkouts:
 
 ![alt](./img/checkouts.png)
 
-    En la sección de checkouts se muestra solo un listado de registros, aquí aparece la tarifa que se tiene que cobrar por hospedaje y la descripción de salida; si se borra, el checkin al cual pertenece volverá a tener un estado activo 
+En la sección de checkouts se muestra solo un listado de registros, aquí aparece la tarifa que se tiene que cobrar por hospedaje y la descripción de salida; si se borra, el checkin al cual pertenece volverá a tener un estado activo 
 
 #### Recordatorios:
 
 ![alt](./img/reminds.png)
 
-    La funcionalidad de recordatorios puede ser utilizada tanto por el gerente como el recepcionista, ambos generan un recordatorio en caso requieran.
+La funcionalidad de recordatorios puede ser utilizada tanto por el gerente como el recepcionista, ambos generan un recordatorio en caso requieran.
 
 ![alt](./img/remind.png)
 
@@ -688,15 +692,15 @@ admin.site.register(User)
 
 ![alt](./img/estructura_front.png)
 
-    El proyecto de angular consta de componentes (porciones de código HTML con independencia), guards (guardias para el bloqueo de acceso a rutas de dashboard, por autenticación y por rol), interfaces (tipo clases, permiten el modelado y estructuración de un tipo de dato, tanto para enviar como para recibir las respuestas de las apis), servicios (bloques de funcionalidad injectables a tantos componentes como se requiera, poseen la comunicación con el backend) y views, siendo estas últimas las vistas principales del proyecto, por si solas implican un bloque significativo y pueden contener más de un componente
+El proyecto de angular consta de componentes (porciones de código HTML con independencia), guards (guardias para el bloqueo de acceso a rutas de dashboard, por autenticación y por rol), interfaces (tipo clases, permiten el modelado y estructuración de un tipo de dato, tanto para enviar como para recibir las respuestas de las apis), servicios (bloques de funcionalidad injectables a tantos componentes como se requiera, poseen la comunicación con el backend) y views, siendo estas últimas las vistas principales del proyecto, por si solas implican un bloque significativo y pueden contener más de un componente
 
 ![alt](./img/estructura_views.png)
 
-    Esta estructura corresponde a las vistas, debido a que algunas rutas son anidadas, como por ejemplo: 'dashboard/gerente' - 'dashboard/recepcionista', es necesario el uso de routes a manera de componentes, estos actúan como punto de articulación para el redireccionamiento a distintas vistas, un ejemplo de ello es 'dash-board-view'
+Esta estructura corresponde a las vistas, debido a que algunas rutas son anidadas, como por ejemplo: 'dashboard/gerente' - 'dashboard/recepcionista', es necesario el uso de routes a manera de componentes, estos actúan como punto de articulación para el redireccionamiento a distintas vistas, un ejemplo de ello es 'dash-board-view'
 
 ### Comunicación con backend:
 
-    La comunicación se logra mediante las peticiones a las apis del backend, gracias a la librerías HttpClient de Angular, mediante esta clase se crea un observable, a partir del cual se envía la petición y se espera la respuesta, por ejemplo:
+La comunicación se logra mediante las peticiones a las apis del backend, gracias a la librerías HttpClient de Angular, mediante esta clase se crea un observable, a partir del cual se envía la petición y se espera la respuesta, por ejemplo:
 
 ```
 export class LoginService extends ApiService{
@@ -716,7 +720,7 @@ export class LoginService extends ApiService{
 }
 ```
 
-    Este servicio de login hereda de una super clase ApiService, en esta misma se encuentra la url del backend y los headers de autenticación:
+Este servicio de login hereda de una super clase ApiService, en esta misma se encuentra la url del backend y los headers de autenticación:
 
 ```
 export abstract class ApiService { // Servicio global para apis
@@ -736,7 +740,7 @@ export abstract class ApiService { // Servicio global para apis
 }
 ```
 
-    Estas clases pueden ser instanciadas a manera de atributo en los componentes y llamar a sus métodos para la comunicación con las apis, ejemplo:
+Estas clases pueden ser instanciadas a manera de atributo en los componentes y llamar a sus métodos para la comunicación con las apis, ejemplo:
 
 ```
   constructor(private service : LoginService, private storage : StorageInfoService, private route : Router ) { }
@@ -766,24 +770,25 @@ export abstract class ApiService { // Servicio global para apis
 
 
 ##  CRUD - Core Business - Clientes finales
-    El núcleo de la aplicación redica en el manejo del proceso de recepción, el cliente final es el usuario (gerente y recepcionista) del hotel, el proceso básico de recepción cosnta de:
 
-    1. El recepcionista inicia sesión en la aplicación.
-    2. El cliente llega al hotel y pide una reserva.
-    3. El recepcionista registra los datos del huesped y de su reserva, visualiza las habitaciones disponibles.
-    4. Se genera la reserva y antes de realizar el checkin, se deben de registrar los acompañantes.
-    5. Una vez generados los acompañantes y el huesped haya llegado para su hospedaje, se realiza el checkin.
-    6. Pasado el tiempo de estadía, el huesped se retira, a esto último se le conoce como checkout.
+El núcleo de la aplicación redica en el manejo del proceso de recepción, el cliente final es el usuario (gerente y recepcionista) del hotel, el proceso básico de recepción cosnta de:
 
-    La estructura de las plantillas para el front end de la aplicación se explicó anteriormente, así como la creación de los modelos.
+1. El recepcionista inicia sesión en la aplicación.
+2. El cliente llega al hotel y pide una reserva.
+3. El recepcionista registra los datos del huesped y de su reserva, visualiza las habitaciones disponibles.
+4. Se genera la reserva y antes de realizar el checkin, se deben de registrar los acompañantes.
+5. Una vez generados los acompañantes y el huesped haya llegado para su hospedaje, se realiza el checkin.
+6. Pasado el tiempo de estadía, el huesped se retira, a esto último se le conoce como checkout.
+
+La estructura de las plantillas para el front end de la aplicación se explicó anteriormente, así como la creación de los modelos.
 
 ##  Servicios mediante una API RESTful
     
-    Se créo un servicio API RESTful para el manejo de la información del hotel, este consta de varias apis, en cada una es necesario el manejo de por lo menos un modelo y un serializer, este último sirve para comprimir la información de un objeto obtenido de la base de datos a texto el cual pueda interpretar el navegador.
+Se créo un servicio API RESTful para el manejo de la información del hotel, este consta de varias apis, en cada una es necesario el manejo de por lo menos un modelo y un serializer, este último sirve para comprimir la información de un objeto obtenido de la base de datos a texto el cual pueda interpretar el navegador.
 
 ### Serializers:
 
-    Fue creado un serializer por cada modelo, en él se incluyen los campos a serializar, aquellos de lectura y el modelo:
+Fue creado un serializer por cada modelo, en él se incluyen los campos a serializar, aquellos de lectura y el modelo:
 
 #### User Serializer:
 
@@ -886,7 +891,7 @@ class RemindSerializer(serializers.ModelSerializer):
 
 ### ApiViews
 
-    Las Api Views son clase que contienen las funciones de api (GET, POST, DELETE, PUT, PATCH), ya sea la petición que se haga a la url registrada se tomará un método u otro, la estructura que toman estas clases es la siguiente:
+Las Api Views son clase que contienen las funciones de api (GET, POST, DELETE, PUT, PATCH), ya sea la petición que se haga a la url registrada se tomará un método u otro, la estructura que toman estas clases es la siguiente:
 
 ```
 class <Model>ApiView(APIView):
@@ -912,9 +917,9 @@ class <Model>ApiView(APIView):
 
 ## Conclusión y trabajo futuro
 
-    Esta aplicación fue pensada para el manejo básico del proceso de recepción de un hotel, por tal motivo no cuenta con una implementación completa o a gran escala de lo que contempla una empresa de este calibre, por lo tanto, la gran desventaja de este proyecto es el bajo panorama de validación, recolección de datos, comunicación en tiempo real, optimización de paquetes, código y alcance en cuanto a la utilidad de algunos campos de los modelos, como por ejemplo el email o telefono.
+Esta aplicación fue pensada para el manejo básico del proceso de recepción de un hotel, por tal motivo no cuenta con una implementación completa o a gran escala de lo que contempla una empresa de este calibre, por lo tanto, la gran desventaja de este proyecto es el bajo panorama de validación, recolección de datos, comunicación en tiempo real, optimización de paquetes, código y alcance en cuanto a la utilidad de algunos campos de los modelos, como por ejemplo el email o telefono.
 
-    Como trabajo futuro para esta aplicación se desea lo siguiente:
+Como trabajo futuro para esta aplicación se desea lo siguiente:
 
 - Manejo personalizado de cuentas de usuario y configuraciones adicionales de dashboard.
 - Manejo de comunicación en tiempo real mediante websockets para la emisión de comunicados.
@@ -928,11 +933,11 @@ class <Model>ApiView(APIView):
 - Pasarela de pagos real y facturación.
 
 
-Github del proyecto (usar rama pweb2):
+Github del proyecto (usar rama develop):
 
-Front End: https://github.com/JJCondoriPinto/UnsaProjectHotelier_Front.git
+Front End: https://github.com/Derek486/hotelier-management-back.git
 
-Back End: https://github.com/JJCondoriPinto/UnsaProjectHotelier_Back.git
+Back End: https://github.com/Derek486/hotelier-management-front.git
 
 Credenciales de base de datos (local):
 
@@ -943,17 +948,6 @@ Credenciales de superusuario (local):
 
 - Email: fastbook@fastbooking.com
 - Contraseña: 7Cu8TL4KpFS3tturZqT5bphc
-
-Credenciales de superusuario (coolify):
-
-- Email: fastbook@fastbooking.com
-- Contraseña: gWqzP0op6FYSWP2cUf0193mkM
-
-Links de proyecto desplegado en coolify:
-
-- https://fastbooking.bjrcode.com/
-
-- https://api.fastbooking.bjrcode.com/
 
 PlayList: https://www.youtube.com/playlist?list=PLgexcj5VtSG8qXptL0nDbwRmez3aBAYwi
 
